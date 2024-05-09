@@ -1,10 +1,10 @@
 # Template file for 'papis'
 pkgname=papis
-version=0.13
-revision=2
-build_style=python3-module
+version=20240509
+revision=1
+build_style=python3-pep517
 make_check_target="papis tests"
-hostmakedepends="python3-setuptools"
+hostmakedepends="hatchling"
 depends="python3-requests python3-yaml python3-chardet python3-BeautifulSoup4
  python3-colorama python3-click python3-slugify python3-prompt_toolkit
  python3-tqdm python3-Pygments python3-stevedore python3-parsing
@@ -16,8 +16,8 @@ maintainer="xaltsc <xaltsc@protonmail.ch>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/papis/papis"
 changelog="https://raw.githubusercontent.com/papis/papis/main/CHANGELOG.md"
-distfiles="https://github.com/papis/papis/archive/refs/tags/v${version}.tar.gz"
-checksum=bca72574a38acbed18091c96f75e9ee0600e0faad5fb741bcf3f4f3b60758020
+distfiles="https://github.com/papis/papis/archive/4f6e8b22429ba5009920632536b59e5aeb579e1d.tar.gz"
+checksum=20424bb9ced44d1bbbd49101623428d1c1745f87aa9b29bbbe2f860f7faaa910
 
 pre_check() {
 	# Required to generate egg_info so that tests can use entry points
